@@ -39,11 +39,11 @@ For example, Buying a phone case from Amazon or getting a shoe from Ebay.
 
 ***More examples of Business Contexts***
 
-![Business Context Examples](/assets/img/Business-Context-Examples.png)
+![Business Context Examples](./assets/img/Business-Context-Examples.png)
 
 ## Timeline of various CLV models
 
-![Timeline of CLV models](/assets/img/CLV-Timeline.png)
+![Timeline of CLV models](./assets/img/CLV-Timeline.png)
 
 ## Data for training CLV models
 
@@ -75,7 +75,7 @@ Drop out process also vary across customers.
 
 **CLV equation**
 
-![Timeline of CLV models](/assets/img/CLV-equation.png)
+![Timeline of CLV models](./assets/img/CLV-equation.png)
 
 These two parts are modelled separately and attached afterwards.  
 You will see this done in my project.  
@@ -88,7 +88,7 @@ While selecting the holdout period for validation, if the customers are typicall
 We have to select a meaningful period for holdout to have a good idea about the model performance.  
 For the holdout set, the standard way is to use 1/2 the training period.  
 
-![Data Split](/assets/img/Data-Split.png)
+![Data Split](./assets/img/Data-Split.png)
 
 ## My project
 Find my sample project here. [Notebook.](https://github.com/rrsankar/CLV-Prediction-Using-ML/blob/main/CLV_using_Lifetimes_BGNBD_GammaGamma/main.ipynb)  
