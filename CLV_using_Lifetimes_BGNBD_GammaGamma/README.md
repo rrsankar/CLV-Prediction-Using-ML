@@ -1,14 +1,11 @@
 # Predicting Customer Lifetime Value using Machine Learning
 
-
-
 ## What is CLV?
 **CLV** or **Customer Lifetime Value** represents the total anticipated value a customer will bring throughout their relationship with a business.  
-While CLV sounds like a value derived over a customer’s entire lifetime, we typically predict future value over a fixed period of time, say 12 or 24 months.  
-The selection of the lifetime period depends on the customer’s average survival period and should be long enough to represent their lifetime value adequately.  
+While CLV sounds like a value derived over a customer’s entire lifetime, we typically predict the value over a fixed period of time, say 12 months or 24 months.  
+The selection of the lifetime period depends on the customer’s average survival period within the business & should be long enough to represent their lifetime value adequately.  
 
 ## Why should businesses care about CLV?
-
 - Segment customers to identify most profitable customers.
 - Identify traits and features of these valuable customers.
 - Determine how to allocate resources among different customers that the business have.
@@ -19,34 +16,30 @@ Modelling CLV holds significant importance for businesses aiming to maximize pro
 ## Business contexts
 There are two kinds of business setting in CLV context - **Contractual** & **Non-Contractual**.
 
-#### Contractual 
-A business setting where customer death is observed.
-Typical subscription based businesses. For example, Netflix
-If someone doesn't renew their subscription, we know that customer has left the business.
+#### Contractual  
+A business setting where customer death is observed.  
+Typical subscription based businesses. For example, Netflix.  
+If someone doesn't renew their subscription, we know that customer has left the business.  
 
-#### Non-Contractual
+#### Non-Contractual  
+A business setting where customer death is unobserved.  
+Common among online retailers. For example, Amazon.  
 
-A business setting where customer death is unobserved.
-Common among online retailers. For example, Amazon.
+#### Discrete vs Continuous Purchases  
+Discrete purchases occur at fixed periods or frequencies.  
+For example, Buying a specific magazine every month or monthly prescription refill.  
 
-#### Discrete vs Continuous Purchases
+Continuous purchases can happen anytime.  
+For example, Buying a phone case from Amazon or getting a shoe from Ebay.  
 
-Discrete purchases occur at fixed periods or frequencies.
-For example, Buying a specific magazine every month or monthly prescription refill.
+***More examples of Business Contexts***  
 
-Continuous purchases can happen anytime.
-For example, Buying a phone case from Amazon or getting a shoe from Ebay.
+![Business Context Examples](./assets/img/Business-Context-Examples.png)  
 
-***More examples of Business Contexts***
-
-![Business Context Examples](./assets/img/Business-Context-Examples.png)
-
-## Timeline of various CLV models
-
-![Timeline of CLV models](./assets/img/CLV-Timeline.png)
+## Timeline of various CLV models  
+![Timeline of CLV models](./assets/img/CLV-Timeline.png)  
 
 ## Data for training CLV models
-
 To train CLV model, we mainly require the following data for each customer - Recency, Frequency, Monetary value (RFM).  
 This is created from the transactions (or sales) data.  
 
@@ -84,24 +77,21 @@ You will see this done in my project.
 
 We split the RFM dataset into training & holdout/validation set.  
 Training set is used to train the model, and we evaluate the model based on holdout set.  
-While selecting the holdout period for validation, if the customers are typically purchasing every month, selecting 2 weeks of holdout period is meaningless.  
-We have to select a meaningful period for holdout to have a good idea about the model performance.  
+While selecting the holdout period for validation, if the customers are typically purchasing every month, selecting 2 weeks of holdout period is meaningless.  We have to select a meaningful period for holdout to have a good idea about the model performance.  
 For the holdout set, the standard way is to use 1/2 the training period.  
 
 ![Data Split](./assets/img/Data-Split.png)
 
-## My project
+## My project  
 Find my sample project here. [Notebook.](https://github.com/rrsankar/CLV-Prediction-Using-ML/blob/main/CLV_using_Lifetimes_BGNBD_GammaGamma/main.ipynb)  
 In this project, I used the BG/NBD & Gamma Gamma model from Lifetimes package to predict the number of future transactions & the monetary value associated with each of those transactions respectively.  
-More explanation provided in the notebook.
-Get the data used in this project here: [dataset](https://archive.ics.uci.edu/dataset/502/online+retail+ii)  
-Note: Update the data path in the notebook.  
+More explanation provided in the notebook.  
+The data used in this project can be found here: [dataset](https://archive.ics.uci.edu/dataset/502/online+retail+ii)    
 
 ## Conclusion
-The goal of this project is to have a good understanding of CLV modeling and have a groundwork for my future experiments in CLV.
+The goal of this project is to have a good understanding of CLV modeling and have a groundwork for my future experiments in CLV.  
 
-## References
-
+## References  
 [Presentation by Peter Fader at Wharton](https://www.youtube.com/watch?v=guj2gVEEx4s)  
 [Talk on CLV modeling by Jean-Rene Gauthier, Ben Van Dyke during PyData Seattle 2017](https://www.youtube.com/watch?v=gx6oHqpRgpY)  
 [History of Buy Till You Die (BTYD) Models](https://retina.ai/academy/lesson/history-of-buy-til-you-die-btyd-models/)
